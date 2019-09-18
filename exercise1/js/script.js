@@ -16,16 +16,18 @@ let squareY;
 let squareSize = 100;
 
 // The current position and size of the square
-let square2X;
-let square2Y;
-let square2Size = 100;
+let rectX;
+let rectY;
+let rectSize = 100;
 
-let 
+
+
 // preload()
 //
 // Nothing here
 
 function preload() {
+
 
 }
 
@@ -38,6 +40,7 @@ function setup() {
 
   // Create our canvas
   createCanvas(640,640);
+
 
 
   // Start the circle off screen to the bottom left
@@ -61,8 +64,8 @@ function setup() {
 
   // Start the square off screen to the right
   // Divide the size by two because we're drawing from the center
-  square2X = width - square2Size/2;
-  square2Y = height + square2Size/2; 
+  rectX = width - rectSize/2;
+  rectY = height + rectSize/2; 
 
    // We'll draw rectangles from the center
    rectMode(CENTER);
@@ -101,13 +104,21 @@ function draw() {
 
 
    // Move square the left
-   square2X = 320;
-   square2Y -=1;
+   rectX = 320;
+   rectY -=1;
    // Make the square transparent blue
    fill(0,0,241,5);
    
    // Display the square
-   rect(square2X,square2Y,square2Size,square2Size);
+   rect(rectX,rectY,rectSize,rectSize);
+
+  //add a shape that is displayed with the mouse 
 
 
+
+
+
+  // Make the square transparent blue
+  fill(0,0,255,10);
+  
 }
